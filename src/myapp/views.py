@@ -7,3 +7,10 @@ def index(request):
         name = request.POST.get('name')
         return HttpResponse('len is {}' .format(len(name)))
     return HttpResponse('It is GET request')
+
+def index2(request):
+    age = int(request.POST.get('age'))
+    if age < 18:
+        return HttpResponse('Closed')
+    else:
+        return HttpResponse('Welcome')
