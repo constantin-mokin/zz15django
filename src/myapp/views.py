@@ -3,4 +3,5 @@ from django.http import HttpResponse
 # Create your views here.
 
 def index(request):
-    return HttpResponse('Hello, WooW')
+    name = request.POST.get('name')
+    return HttpResponse('len is {}' .format(len(name)))
