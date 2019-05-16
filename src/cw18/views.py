@@ -30,3 +30,18 @@ def cw18_index_01(request):
         result = 'len is {}, amount_vowels is {}, amount_consonant is {}' .format(len(comment), amount_vowels, amount_consonant)
         return HttpResponse(result)
     return HttpResponse('It is GET request')
+
+
+
+
+def cw18_index_02(request):
+    if request.method == "POST":
+        comment = request.POST.get('comment')
+        name_author = request.POST.get('name')
+        string_box = comment.split('\n')
+        result_lsit = []
+        for element in string_box:
+            result_lsit.append(f"{element} (c){name_author}")
+        result = "<br>".join(result_lsit)
+        return HttpResponse(result)
+    return HttpResponse('It is GET request')
