@@ -23,6 +23,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     # path('index/', index),
     # path('index2/', index2),
-    path(r'indexes/', include('cw18.urls'))
+    path(r'indexes/', include('cw18.urls')),
+    path(r'cw19/', include('cw19.urls')),
 ]
 
