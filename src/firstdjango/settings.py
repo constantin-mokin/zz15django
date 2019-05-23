@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'myapp',
     'cw18',
     'cw19',
+    'cw20',
 
 ]
 
@@ -61,6 +62,7 @@ TEMPLATES = [
         'DIRS': [
             'templates',
             'cw19.templates'
+            'cw20.templates'
         ],
         'APP_DIRS': True,
         'OPTIONS': {
