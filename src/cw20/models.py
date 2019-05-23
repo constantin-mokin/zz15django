@@ -7,3 +7,4 @@ class Customer(models.Model):
     lastname = models.CharField(max_length=255)
     age = models.IntegerField()
     proffesion = models.CharField(max_length=255)
+
