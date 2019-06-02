@@ -5,6 +5,9 @@ from cw19.forms import PostForm
 # Create your views here.
 
 def comment_add(request):
+
+    request.session['hello'] = 'world'
+
     if request.method == 'GET':
         context = {'form': PostForm()}
         return render(request, 'comment_add.html', context)

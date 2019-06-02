@@ -5,6 +5,7 @@
 {% block content %}
 
 <form action="{% url 'comment_add' %}" method="POST">
+    {% csrf_token %}
     {{ form.as_p }}
     <br><input type="submit" name="submit", value="Post">
 </form>
